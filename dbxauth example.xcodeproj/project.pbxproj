@@ -7,34 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AE9EE301A86B13B00000AF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9EE2F1A86B13B00000AF1 /* AppDelegate.m */; };
+		3AE9EE301A86B13B00000AF1 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9EE2F1A86B13B00000AF1 /* AppDelegate.mm */; };
 		3AE9EE321A86B13B00000AF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9EE311A86B13B00000AF1 /* main.m */; };
 		3AE9EE341A86B13B00000AF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AE9EE331A86B13B00000AF1 /* Images.xcassets */; };
 		3AE9EE371A86B13B00000AF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AE9EE351A86B13B00000AF1 /* MainMenu.xib */; };
-		3AE9EE431A86B13B00000AF1 /* dbxauthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9EE421A86B13B00000AF1 /* dbxauthTests.m */; };
+		3AE9EE721A86B37500000AF1 /* dbxauth-osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9EE4D1A86B2D400000AF1 /* dbxauth-osx.mm */; };
+		3AE9EE731A86B37700000AF1 /* dbxauth.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9EE4E1A86B2D400000AF1 /* dbxauth.cc */; };
+		3AE9EE751A86B37F00000AF1 /* dbxauth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE9EE4F1A86B2D400000AF1 /* dbxauth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE9EE761A86B3B400000AF1 /* libdbxauth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE9EE591A86B2FC00000AF1 /* libdbxauth.a */; };
+		3AE9EE941A86B4E400000AF1 /* json11.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9EE921A86B4E400000AF1 /* json11.cc */; };
+		3AE9EE951A86B4E400000AF1 /* json11.hh in Headers */ = {isa = PBXBuildFile; fileRef = 3AE9EE931A86B4E400000AF1 /* json11.hh */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AE9EE981A86B5CB00000AF1 /* libjson11.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE9EE7B1A86B4BF00000AF1 /* libjson11.a */; };
+		3AE9EE9A1A86B5E400000AF1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE9EE991A86B5E400000AF1 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3AE9EE3D1A86B13B00000AF1 /* PBXContainerItemProxy */ = {
+		3AE9EE701A86B35D00000AF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3AE9EE211A86B13B00000AF1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3AE9EE281A86B13B00000AF1;
+			remoteGlobalIDString = 3AE9EE581A86B2FC00000AF1;
 			remoteInfo = dbxauth;
+		};
+		3AE9EE961A86B4FC00000AF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AE9EE211A86B13B00000AF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AE9EE7A1A86B4BF00000AF1;
+			remoteInfo = json11;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3AE9EE291A86B13B00000AF1 /* dbxauth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dbxauth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE9EE291A86B13B00000AF1 /* dbxauth example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dbxauth example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE9EE2D1A86B13B00000AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AE9EE2E1A86B13B00000AF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3AE9EE2F1A86B13B00000AF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3AE9EE2F1A86B13B00000AF1 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		3AE9EE311A86B13B00000AF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3AE9EE331A86B13B00000AF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3AE9EE361A86B13B00000AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		3AE9EE3C1A86B13B00000AF1 /* dbxauthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dbxauthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AE9EE411A86B13B00000AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AE9EE421A86B13B00000AF1 /* dbxauthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dbxauthTests.m; sourceTree = "<group>"; };
+		3AE9EE4D1A86B2D400000AF1 /* dbxauth-osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "dbxauth-osx.mm"; sourceTree = "<group>"; };
+		3AE9EE4E1A86B2D400000AF1 /* dbxauth.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dbxauth.cc; sourceTree = "<group>"; };
+		3AE9EE4F1A86B2D400000AF1 /* dbxauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbxauth.h; sourceTree = "<group>"; };
+		3AE9EE591A86B2FC00000AF1 /* libdbxauth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdbxauth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE9EE7B1A86B4BF00000AF1 /* libjson11.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libjson11.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE9EE921A86B4E400000AF1 /* json11.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json11.cc; sourceTree = "<group>"; };
+		3AE9EE931A86B4E400000AF1 /* json11.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json11.hh; sourceTree = "<group>"; };
+		3AE9EE991A86B5E400000AF1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,10 +61,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE9EE9A1A86B5E400000AF1 /* WebKit.framework in Frameworks */,
+				3AE9EE981A86B5CB00000AF1 /* libjson11.a in Frameworks */,
+				3AE9EE761A86B3B400000AF1 /* libdbxauth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3AE9EE391A86B13B00000AF1 /* Frameworks */ = {
+		3AE9EE561A86B2FC00000AF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE9EE781A86B4BF00000AF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,8 +87,9 @@
 		3AE9EE201A86B13B00000AF1 = {
 			isa = PBXGroup;
 			children = (
-				3AE9EE2B1A86B13B00000AF1 /* dbxauth */,
-				3AE9EE3F1A86B13B00000AF1 /* dbxauthTests */,
+				3AE9EE4C1A86B2D400000AF1 /* dbxauth */,
+				3AE9EE7C1A86B4BF00000AF1 /* json11 */,
+				3AE9EE2B1A86B13B00000AF1 /* example-app */,
 				3AE9EE2A1A86B13B00000AF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,22 +97,24 @@
 		3AE9EE2A1A86B13B00000AF1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3AE9EE291A86B13B00000AF1 /* dbxauth.app */,
-				3AE9EE3C1A86B13B00000AF1 /* dbxauthTests.xctest */,
+				3AE9EE291A86B13B00000AF1 /* dbxauth example.app */,
+				3AE9EE591A86B2FC00000AF1 /* libdbxauth.a */,
+				3AE9EE7B1A86B4BF00000AF1 /* libjson11.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3AE9EE2B1A86B13B00000AF1 /* dbxauth */ = {
+		3AE9EE2B1A86B13B00000AF1 /* example-app */ = {
 			isa = PBXGroup;
 			children = (
 				3AE9EE2E1A86B13B00000AF1 /* AppDelegate.h */,
-				3AE9EE2F1A86B13B00000AF1 /* AppDelegate.m */,
+				3AE9EE2F1A86B13B00000AF1 /* AppDelegate.mm */,
 				3AE9EE331A86B13B00000AF1 /* Images.xcassets */,
 				3AE9EE351A86B13B00000AF1 /* MainMenu.xib */,
+				3AE9EE991A86B5E400000AF1 /* WebKit.framework */,
 				3AE9EE2C1A86B13B00000AF1 /* Supporting Files */,
 			);
-			path = dbxauth;
+			path = "example-app";
 			sourceTree = "<group>";
 		};
 		3AE9EE2C1A86B13B00000AF1 /* Supporting Files */ = {
@@ -94,29 +126,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3AE9EE3F1A86B13B00000AF1 /* dbxauthTests */ = {
+		3AE9EE4C1A86B2D400000AF1 /* dbxauth */ = {
 			isa = PBXGroup;
 			children = (
-				3AE9EE421A86B13B00000AF1 /* dbxauthTests.m */,
-				3AE9EE401A86B13B00000AF1 /* Supporting Files */,
+				3AE9EE4F1A86B2D400000AF1 /* dbxauth.h */,
+				3AE9EE4E1A86B2D400000AF1 /* dbxauth.cc */,
+				3AE9EE4D1A86B2D400000AF1 /* dbxauth-osx.mm */,
 			);
-			path = dbxauthTests;
+			path = dbxauth;
 			sourceTree = "<group>";
 		};
-		3AE9EE401A86B13B00000AF1 /* Supporting Files */ = {
+		3AE9EE7C1A86B4BF00000AF1 /* json11 */ = {
 			isa = PBXGroup;
 			children = (
-				3AE9EE411A86B13B00000AF1 /* Info.plist */,
+				3AE9EE931A86B4E400000AF1 /* json11.hh */,
+				3AE9EE921A86B4E400000AF1 /* json11.cc */,
 			);
-			name = "Supporting Files";
+			path = json11;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3AE9EE571A86B2FC00000AF1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE9EE751A86B37F00000AF1 /* dbxauth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE9EE791A86B4BF00000AF1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE9EE951A86B4E400000AF1 /* json11.hh in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		3AE9EE281A86B13B00000AF1 /* dbxauth */ = {
+		3AE9EE281A86B13B00000AF1 /* dbxauth example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3AE9EE461A86B13B00000AF1 /* Build configuration list for PBXNativeTarget "dbxauth" */;
+			buildConfigurationList = 3AE9EE461A86B13B00000AF1 /* Build configuration list for PBXNativeTarget "dbxauth example" */;
 			buildPhases = (
 				3AE9EE251A86B13B00000AF1 /* Sources */,
 				3AE9EE261A86B13B00000AF1 /* Frameworks */,
@@ -125,29 +178,47 @@
 			buildRules = (
 			);
 			dependencies = (
+				3AE9EE971A86B4FC00000AF1 /* PBXTargetDependency */,
+				3AE9EE711A86B35D00000AF1 /* PBXTargetDependency */,
 			);
-			name = dbxauth;
+			name = "dbxauth example";
 			productName = dbxauth;
-			productReference = 3AE9EE291A86B13B00000AF1 /* dbxauth.app */;
+			productReference = 3AE9EE291A86B13B00000AF1 /* dbxauth example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3AE9EE3B1A86B13B00000AF1 /* dbxauthTests */ = {
+		3AE9EE581A86B2FC00000AF1 /* dbxauth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3AE9EE491A86B13B00000AF1 /* Build configuration list for PBXNativeTarget "dbxauthTests" */;
+			buildConfigurationList = 3AE9EE6A1A86B2FC00000AF1 /* Build configuration list for PBXNativeTarget "dbxauth" */;
 			buildPhases = (
-				3AE9EE381A86B13B00000AF1 /* Sources */,
-				3AE9EE391A86B13B00000AF1 /* Frameworks */,
-				3AE9EE3A1A86B13B00000AF1 /* Resources */,
+				3AE9EE551A86B2FC00000AF1 /* Sources */,
+				3AE9EE561A86B2FC00000AF1 /* Frameworks */,
+				3AE9EE571A86B2FC00000AF1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3AE9EE3E1A86B13B00000AF1 /* PBXTargetDependency */,
 			);
-			name = dbxauthTests;
-			productName = dbxauthTests;
-			productReference = 3AE9EE3C1A86B13B00000AF1 /* dbxauthTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = dbxauth;
+			productName = dbxauth;
+			productReference = 3AE9EE591A86B2FC00000AF1 /* libdbxauth.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3AE9EE7A1A86B4BF00000AF1 /* json11 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AE9EE8C1A86B4BF00000AF1 /* Build configuration list for PBXNativeTarget "json11" */;
+			buildPhases = (
+				3AE9EE771A86B4BF00000AF1 /* Sources */,
+				3AE9EE781A86B4BF00000AF1 /* Frameworks */,
+				3AE9EE791A86B4BF00000AF1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = json11;
+			productName = json11;
+			productReference = 3AE9EE7B1A86B4BF00000AF1 /* libjson11.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -161,13 +232,15 @@
 					3AE9EE281A86B13B00000AF1 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					3AE9EE3B1A86B13B00000AF1 = {
+					3AE9EE581A86B2FC00000AF1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 3AE9EE281A86B13B00000AF1;
+					};
+					3AE9EE7A1A86B4BF00000AF1 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
-			buildConfigurationList = 3AE9EE241A86B13B00000AF1 /* Build configuration list for PBXProject "dbxauth" */;
+			buildConfigurationList = 3AE9EE241A86B13B00000AF1 /* Build configuration list for PBXProject "dbxauth example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -180,8 +253,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3AE9EE281A86B13B00000AF1 /* dbxauth */,
-				3AE9EE3B1A86B13B00000AF1 /* dbxauthTests */,
+				3AE9EE281A86B13B00000AF1 /* dbxauth example */,
+				3AE9EE581A86B2FC00000AF1 /* dbxauth */,
+				3AE9EE7A1A86B4BF00000AF1 /* json11 */,
 			);
 		};
 /* End PBXProject section */
@@ -196,13 +270,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3AE9EE3A1A86B13B00000AF1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -211,25 +278,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AE9EE321A86B13B00000AF1 /* main.m in Sources */,
-				3AE9EE301A86B13B00000AF1 /* AppDelegate.m in Sources */,
+				3AE9EE301A86B13B00000AF1 /* AppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3AE9EE381A86B13B00000AF1 /* Sources */ = {
+		3AE9EE551A86B2FC00000AF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AE9EE431A86B13B00000AF1 /* dbxauthTests.m in Sources */,
+				3AE9EE721A86B37500000AF1 /* dbxauth-osx.mm in Sources */,
+				3AE9EE731A86B37700000AF1 /* dbxauth.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE9EE771A86B4BF00000AF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE9EE941A86B4E400000AF1 /* json11.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3AE9EE3E1A86B13B00000AF1 /* PBXTargetDependency */ = {
+		3AE9EE711A86B35D00000AF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3AE9EE281A86B13B00000AF1 /* dbxauth */;
-			targetProxy = 3AE9EE3D1A86B13B00000AF1 /* PBXContainerItemProxy */;
+			target = 3AE9EE581A86B2FC00000AF1 /* dbxauth */;
+			targetProxy = 3AE9EE701A86B35D00000AF1 /* PBXContainerItemProxy */;
+		};
+		3AE9EE971A86B4FC00000AF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AE9EE7A1A86B4BF00000AF1 /* json11 */;
+			targetProxy = 3AE9EE961A86B4FC00000AF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -325,10 +406,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = dbxauth/Info.plist;
+				INFOPLIST_FILE = "example-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "dbxauth example";
 			};
 			name = Debug;
 		};
@@ -336,53 +418,58 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = dbxauth/Info.plist;
+				INFOPLIST_FILE = "example-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "dbxauth example";
 			};
 			name = Release;
 		};
-		3AE9EE4A1A86B13B00000AF1 /* Debug */ = {
+		3AE9EE6B1A86B2FC00000AF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
+				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = dbxauthTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dbxauth.app/Contents/MacOS/dbxauth";
 			};
 			name = Debug;
 		};
-		3AE9EE4B1A86B13B00000AF1 /* Release */ = {
+		3AE9EE6C1A86B2FC00000AF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3AE9EE8D1A86B4BF00000AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = dbxauthTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dbxauth.app/Contents/MacOS/dbxauth";
+			};
+			name = Debug;
+		};
+		3AE9EE8E1A86B4BF00000AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3AE9EE241A86B13B00000AF1 /* Build configuration list for PBXProject "dbxauth" */ = {
+		3AE9EE241A86B13B00000AF1 /* Build configuration list for PBXProject "dbxauth example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3AE9EE441A86B13B00000AF1 /* Debug */,
@@ -391,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3AE9EE461A86B13B00000AF1 /* Build configuration list for PBXNativeTarget "dbxauth" */ = {
+		3AE9EE461A86B13B00000AF1 /* Build configuration list for PBXNativeTarget "dbxauth example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3AE9EE471A86B13B00000AF1 /* Debug */,
@@ -399,11 +486,19 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		3AE9EE491A86B13B00000AF1 /* Build configuration list for PBXNativeTarget "dbxauthTests" */ = {
+		3AE9EE6A1A86B2FC00000AF1 /* Build configuration list for PBXNativeTarget "dbxauth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AE9EE4A1A86B13B00000AF1 /* Debug */,
-				3AE9EE4B1A86B13B00000AF1 /* Release */,
+				3AE9EE6B1A86B2FC00000AF1 /* Debug */,
+				3AE9EE6C1A86B2FC00000AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3AE9EE8C1A86B4BF00000AF1 /* Build configuration list for PBXNativeTarget "json11" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AE9EE8D1A86B4BF00000AF1 /* Debug */,
+				3AE9EE8E1A86B4BF00000AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
