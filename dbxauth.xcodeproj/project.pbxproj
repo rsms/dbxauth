@@ -240,7 +240,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3AE9EE241A86B13B00000AF1 /* Build configuration list for PBXProject "dbxauth example" */;
+			buildConfigurationList = 3AE9EE241A86B13B00000AF1 /* Build configuration list for PBXProject "dbxauth" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -469,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3AE9EE241A86B13B00000AF1 /* Build configuration list for PBXProject "dbxauth example" */ = {
+		3AE9EE241A86B13B00000AF1 /* Build configuration list for PBXProject "dbxauth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3AE9EE441A86B13B00000AF1 /* Debug */,
@@ -485,6 +485,7 @@
 				3AE9EE481A86B13B00000AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AE9EE6A1A86B2FC00000AF1 /* Build configuration list for PBXNativeTarget "dbxauth" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				3AE9EE6C1A86B2FC00000AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AE9EE8C1A86B4BF00000AF1 /* Build configuration list for PBXNativeTarget "json11" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +503,7 @@
 				3AE9EE8E1A86B4BF00000AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
