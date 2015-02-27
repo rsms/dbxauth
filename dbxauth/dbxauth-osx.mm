@@ -36,14 +36,16 @@ static BOOL keychain_update_data(NSString* key, NSData* value) {
   return (SecItemUpdate((__bridge CFDictionaryRef)q, (__bridge CFDictionaryRef)q) == errSecSuccess);
 }
 
-//static BOOL keychain_remove(NSString* key) {
-//  NSMutableDictionary *q = create_keychain_search_dict(key);
-//  return (SecItemDelete((__bridge CFDictionaryRef)q) == errSecSuccess);
-//}
+static BOOL keychain_remove(NSString* key) {
+  NSMutableDictionary *q = create_keychain_search_dict(key);
+  return (SecItemDelete((__bridge CFDictionaryRef)q) == errSecSuccess);
+}
 
 static BOOL keychain_set_data(NSString* key, NSData* value) {
   if (!keychain_add_data(key, value)) {
-    return keychain_update_data(key, value);
+    if (!keychain_update_data(key, value)) {
+      return keychain_remove(key) && keychain_add_data(key, value);
+    }
   }
   return YES;
 }
@@ -60,8 +62,9 @@ static Json keychain_get_dbx_accounts() {
 }
 
 static bool keychain_set_dbx_accounts(Json accounts) {
-  const std::string s{Json{accounts}.dump()};
-  return keychain_set_data(@"dbx_accounts", [NSData dataWithBytes:s.data() length:s.size()]);
+  auto s = Json{accounts}.dump();
+  auto* jsonData = [NSData dataWithBytes:(void*)s.data() length:s.size()];
+  return keychain_set_data(@"dbx_accounts", jsonData);
 }
 
 // -------------------------------------------------------------------------------------------------------------
@@ -75,15 +78,19 @@ static void HandleAuthReply(const std::string& uri,
     if (dbxauth::parse_oauth2_reply(account, uri)) {
       // captures: self, account
       auto json = keychain_get_dbx_accounts();
-      Json::array accounts;
-      if (json.is_array()) {
-        accounts = json.array_items();
-      };
-      accounts.emplace_back(Json::object{
+
+      Json::object accounts;
+      if (json.is_object()) {
+        accounts = json.object_items();
+      }
+      
+      accounts[account.uid] = Json::object{
+        {"uid",          account.uid},
         {"access_token", account.access_token},
-        {"uid", account.uid}
-      });
+      };
+
       if (!keychain_set_dbx_accounts(accounts)) {
+        NSLog(@"[dbxauth] failed to store accounts in keychain");
         account.uid.clear();
         account.access_token.clear();
       }
@@ -176,15 +183,38 @@ namespace dbxauth {
 AccountList App::linked_accounts_sync() const {
   auto json = keychain_get_dbx_accounts();
   AccountList accounts;
-  if (json.is_array()) {
-    auto& array_items = json.array_items();
-    accounts.reserve(array_items.size());
-    for (auto& entry : array_items) {
-      if (entry.is_object()) {
-        accounts.emplace_back(Account{entry["access_token"].string_value(), entry["uid"].string_value()});
+  
+  // if (json.is_array()) {
+  //   // Legacy format -- convert to current format
+  //   Json::object accountMap;
+  //   auto& accountList = json.array_items();
+  //   for (auto& entry : accountList) {
+  //     auto& accountObj = entry;
+  //     if (accountObj.is_object()) {
+  //       auto& uid = accountObj["uid"].string_value();
+  //       if (!uid.empty()) {
+  //         accountMap[uid] = accountObj;
+  //       }
+  //     }
+  //   }
+  //   json = Json{accountMap};
+  //   keychain_set_dbx_accounts(json);
+  // }
+
+  if (json.is_object()) {
+    auto& accountMap = json.object_items();
+    accounts.reserve(accountMap.size());
+    for (auto& entry : accountMap) {
+      auto& accountObj = entry.second;
+      if (accountObj.is_object()) {
+        accounts.emplace_back(Account{
+          accountObj["access_token"].string_value(),
+          accountObj["uid"].string_value()
+        });
       }
     }
   }
+
   return std::move(accounts);
 }
 
@@ -215,17 +245,18 @@ void App::link_account(const std::string& app_uri_base, std::function<void(Accou
   auto* webView = [[WebView alloc] initWithFrame:frame];
   webView.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
   auto* window = [[NSWindow alloc] initWithContentRect:frame styleMask:NSTitledWindowMask backing:NSBackingStoreBuffered defer:NO screen:[NSScreen mainScreen]];
+  window.title = @"Sign in with Dropbox";
   auto* contentView = (NSView*)window.contentView;
   [contentView addSubview:webView];
   
   // enable local storage
-  WebPreferences* prefs = [WebPreferences standardPreferences];
-  if ([prefs respondsToSelector:@selector(setLocalStorageEnabled:)]) {
-    NSLog(@"localstorage set");
-    [prefs performSelector:@selector(setLocalStorageEnabled:) withObject:[NSNumber numberWithBool:YES]];
-  }
-  prefs.autosaves = YES;
-  webView.preferences = prefs;
+  //WebPreferences* prefs = [WebPreferences standardPreferences];
+  //if ([prefs respondsToSelector:@selector(setLocalStorageEnabled:)]) {
+  //  NSLog(@"localstorage set");
+  //  [prefs performSelector:@selector(setLocalStorageEnabled:) withObject:[NSNumber numberWithBool:YES]];
+  //}
+  //prefs.autosaves = YES;
+  //webView.preferences = prefs;
   
   // web view delegate
   auto* webViewDelegate = [_DBXAuthWebViewDelegate new];

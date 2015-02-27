@@ -1,6 +1,5 @@
 #import "AppDelegate.h"
 #import "dbxauth.h"
-#import <vector>
 
 static const dbxauth::App dbx{"awoo8v8em3nvl8q"};
 

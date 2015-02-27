@@ -45,7 +45,7 @@ bool parse_oauth2_reply(Account& account, const std::string& uri) {
     // value
     if ((pos2 = uri.find_first_of('&', pos)) == std::string::npos) {
       // last value
-      pos2 = uri.size()-1;
+      pos2 = uri.size();
     }
     
     // printf("Found value '%s'\n", uri.substr(pos, pos2-pos).c_str());
