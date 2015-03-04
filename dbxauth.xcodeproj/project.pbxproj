@@ -411,6 +411,7 @@
 					"$(SRCROOT)/../json11/json11",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -424,6 +425,7 @@
 					"$(SRCROOT)/../json11/json11",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
